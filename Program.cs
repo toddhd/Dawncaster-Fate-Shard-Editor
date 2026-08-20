@@ -211,21 +211,36 @@ public sealed class MainForm : Form
 
     private void BrowseForFile()
     {
-        using var dialog = new OpenFileDialog
+        try
         {
-            Title = "Select Dawncaster DC_Conf.dc",
-            FileName = "DC_Conf.dc",
-            Filter = "Dawncaster configuration (DC_Conf.dc)|DC_Conf.dc|All files (*.*)|*.*"
-        };
+            using var dialog = new OpenFileDialog
+            {
+                Title = "Select Dawncaster DC_Conf.dc",
+                FileName = "DC_Conf.dc",
+                Filter = "Dawncaster configuration (DC_Conf.dc)|DC_Conf.dc|All files (*.*)|*.*"
+            };
 
-        var currentDirectory = Path.GetDirectoryName(pathBox.Text);
-        if (!string.IsNullOrWhiteSpace(currentDirectory) && Directory.Exists(currentDirectory))
-            dialog.InitialDirectory = currentDirectory;
+            var currentDirectory = Path.GetDirectoryName(pathBox.Text);
+            if (!string.IsNullOrWhiteSpace(currentDirectory) && Directory.Exists(currentDirectory))
+                dialog.InitialDirectory = currentDirectory;
 
-        if (dialog.ShowDialog(this) == DialogResult.OK)
+            if (dialog.ShowDialog(this) == DialogResult.OK)
+            {
+                pathBox.Text = dialog.FileName;
+                LoadFile();
+            }
+        }
+        catch (Exception ex)
         {
-            pathBox.Text = dialog.FileName;
-            LoadFile();
+            MessageBox.Show(
+                this,
+                ex.Message,
+                "Unable to Browse for File",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error
+            );
+
+            SetStatus("Unable to browse for the configuration file.");
         }
     }
 
