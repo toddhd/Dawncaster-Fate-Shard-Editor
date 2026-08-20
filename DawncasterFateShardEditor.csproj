@@ -8,6 +8,7 @@
     <Nullable>enable</Nullable>
     <AssemblyName>DawncasterFateShardEditor</AssemblyName>
     <RootNamespace>DawncasterFateShardEditor</RootNamespace>
+    <ApplicationIcon>DawncasterFateShardEditor.ico</ApplicationIcon>
   </PropertyGroup>
 
 </Project>

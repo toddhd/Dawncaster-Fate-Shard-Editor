@@ -32,6 +32,7 @@ public sealed class MainForm : Form
     public MainForm()
     {
         Text = "Dawncaster Fate Shard Editor";
+        Icon = new Icon("DawncasterFateShardEditor.ico");
         StartPosition = FormStartPosition.CenterScreen;
         MinimumSize = new Size(700, 550);
         Size = new Size(820, 550);
