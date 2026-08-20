@@ -13,3 +13,6 @@ obj/
 # OS files
 Thumbs.db
 .DS_Store
+
+#Personal Files
+terminal commands.txt
