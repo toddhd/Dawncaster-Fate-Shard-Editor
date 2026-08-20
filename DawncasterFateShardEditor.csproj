@@ -11,4 +11,10 @@
     <ApplicationIcon>DawncasterFateShardEditor.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="DawncasterFateShardEditor.ico"
+             CopyToOutputDirectory="PreserveNewest"
+             CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+
 </Project>
