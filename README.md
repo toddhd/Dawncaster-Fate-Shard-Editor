@@ -3,7 +3,8 @@
 **A simple Windows utility that makes it easy to change your Fate Shard
 balance in Dawncaster without manually editing game files.**
 
-![Dawncaster Fate Shard Editor](screenshots/DawncasterFateShardEditor.png)
+![Dawncaster Fate Shard
+Editor](screenshots/DawncasterFateShardEditor.png)
 
 [Download the latest
 version](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest)
@@ -11,6 +12,7 @@ version](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest)
 EXE](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/download/v1.0.1/DawncasterFateShardEditor.exe)
 \| [View all
 releases](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases)
+\| [Support on Ko-fi](https://ko-fi.com/toddhd)
 
 ## What is this?
 
@@ -35,18 +37,18 @@ No manual JSON editing is required.
 
 ## Features
 
-- Automatically looks for the standard Windows Dawncaster
-  configuration file
-- Displays your current Fate Shard balance
-- Lets you enter a new Fate Shard amount
-- Validates the configuration file before changing it
-- Changes only the `m_CurrentFateShards` value
-- Creates a timestamped backup before saving
-- Provides clear error messages if the file cannot be found, read, or
-  saved
-- Responsive Windows interface with DPI scaling
-- Self-contained Windows executable with no separate .NET installation
-  required
+-   Automatically looks for the standard Windows Dawncaster
+    configuration file
+-   Displays your current Fate Shard balance
+-   Lets you enter a new Fate Shard amount
+-   Validates the configuration file before changing it
+-   Changes only the `m_CurrentFateShards` value
+-   Creates a timestamped backup before saving
+-   Provides clear error messages if the file cannot be found, read, or
+    saved
+-   Responsive Windows interface with DPI scaling
+-   Self-contained Windows executable with no separate .NET installation
+    required
 
 ## Download
 
@@ -101,32 +103,54 @@ The editor attempts to locate this file automatically.
 
 ## Using the editor with Android through Cloud Save
 
-Dawncaster is also available on Android. This editor does **not** directly modify files on an Android phone or tablet, but Android players may still be able to benefit from it by using Dawncaster's built-in **Cloud Save** feature.
+Dawncaster is also available on Android. This editor does **not**
+directly modify files on an Android phone or tablet, but Android players
+may still be able to benefit from it by using Dawncaster's built-in
+**Cloud Save** feature.
 
-If your Dawncaster progress is shared between the Windows and Android versions, changes made with this editor on Windows may be transferred to Android when the game synchronizes your save data.
+If your Dawncaster progress is shared between the Windows and Android
+versions, changes made with this editor on Windows may be transferred to
+Android when the game synchronizes your save data.
 
 ### Suggested steps
 
-1. Make sure you are using the same Dawncaster cloud account/save on both Windows and Android.
-2. Enable **Cloud Save** in Dawncaster on both devices.
-3. Allow both versions of the game to synchronize normally before making any changes.
-4. Close Dawncaster on Windows.
-5. Run the Fate Shard Editor on Windows and change your Fate Shard balance.
-6. Start Dawncaster on Windows and confirm that the new Fate Shard amount appears.
-7. Allow the Windows version time to synchronize its updated save to the cloud.
-8. Close Dawncaster on Windows.
-9. Start Dawncaster on your Android device while connected to the internet and allow it to synchronize.
-10. Check whether the updated Fate Shard balance has transferred to Android.
+1.  Make sure you are using the same Dawncaster cloud account/save on
+    both Windows and Android.
+2.  Enable **Cloud Save** in Dawncaster on both devices.
+3.  Allow both versions of the game to synchronize normally before
+    making any changes.
+4.  Close Dawncaster on Windows.
+5.  Run the Fate Shard Editor on Windows and change your Fate Shard
+    balance.
+6.  Start Dawncaster on Windows and confirm that the new Fate Shard
+    amount appears.
+7.  Allow the Windows version time to synchronize its updated save to
+    the cloud.
+8.  Close Dawncaster on Windows.
+9.  Start Dawncaster on your Android device while connected to the
+    internet and allow it to synchronize.
+10. Check whether the updated Fate Shard balance has transferred to
+    Android.
 
 ### Important Android / Cloud Save warning
 
-Cloud synchronization can potentially overwrite newer save data with data from another device. Before experimenting with cross-device syncing, make sure your important game progress is safely synchronized and avoid playing on both devices at the same time.
+Cloud synchronization can potentially overwrite newer save data with
+data from another device. Before experimenting with cross-device
+syncing, make sure your important game progress is safely synchronized
+and avoid playing on both devices at the same time.
 
-The Fate Shard Editor creates a backup of the **Windows** `DC_Conf.dc` file before editing it, but that backup does not protect or restore Android save data or cloud data.
+The Fate Shard Editor creates a backup of the **Windows** `DC_Conf.dc`
+file before editing it, but that backup does not protect or restore
+Android save data or cloud data.
 
-**Cloud transfer of an edited Fate Shard balance is not guaranteed.** Dawncaster or its cloud-save implementation may change, and not every value stored locally is necessarily synchronized between platforms. If Fate Shards do not transfer, the Windows editor has not modified your Android device.
+**Cloud transfer of an edited Fate Shard balance is not guaranteed.**
+Dawncaster or its cloud-save implementation may change, and not every
+value stored locally is necessarily synchronized between platforms. If
+Fate Shards do not transfer, the Windows editor has not modified your
+Android device.
 
-At present, this utility does not directly edit Dawncaster files on Android.
+At present, this utility does not directly edit Dawncaster files on
+Android.
 
 ## Backups and restoring your original file
 
@@ -146,7 +170,7 @@ you use the editor.
 ### How to restore a backup
 
 1.  Close Dawncaster and the Fate Shard Editor.
-2.  Open:
+2.  Open
     `%USERPROFILE%\AppData\LocalLow\Wanderlost Interactive\Dawncaster\`
 3.  Make a copy of the current `DC_Conf.dc` somewhere safe if you may
     want it later.
@@ -154,7 +178,7 @@ you use the editor.
     `DC_Conf.backup_20260820_153045.dc`.
 5.  Rename the current `DC_Conf.dc` or move it out of the folder.
 6.  Make a **copy** of the desired backup file.
-7.  Rename that copied file to: `DC_Conf.dc`
+7.  Rename that copied file to `DC_Conf.dc`.
 8.  Start Dawncaster.
 
 Using a copy allows you to keep the timestamped backup available in case
@@ -173,11 +197,11 @@ utility does not expect.
 
 Before editing, it is recommended that you:
 
-- Close Dawncaster completely.
-- Keep the automatically generated backup files.
-- Avoid manually deleting backups until you are confident the game is
-  working normally.
-- Restore a backup if Dawncaster behaves unexpectedly after a change.
+-   Close Dawncaster completely.
+-   Keep the automatically generated backup files.
+-   Avoid manually deleting backups until you are confident the game is
+    working normally.
+-   Restore a backup if Dawncaster behaves unexpectedly after a change.
 
 The author is not responsible for lost progress, corrupted configuration
 files, or other problems resulting from use of this utility.
@@ -191,19 +215,31 @@ SmartScreen warning when downloading or running it.
 Only download releases from this GitHub repository. The complete source
 code is available here for inspection.
 
+## Support the project
+
+Dawncaster Fate Shard Editor is free to use. If you find it useful and
+would like to support continued development, you can leave a tip on
+Ko-fi:
+
+**[Support Dawncaster Fate Shard Editor on
+Ko-fi](https://ko-fi.com/toddhd)**
+
+Tips are completely optional. Bug reports, suggestions, and other
+feedback are also appreciated.
+
 ## Building from source
 
 The project is a C# WinForms application targeting .NET 8.
 
 To run it from source:
 
-```powershell
+``` powershell
 dotnet run
 ```
 
 To publish a self-contained Windows x64 executable:
 
-```powershell
+``` powershell
 dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
 ```
 
