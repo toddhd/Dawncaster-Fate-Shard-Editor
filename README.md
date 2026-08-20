@@ -3,6 +3,8 @@
 **A simple Windows utility that makes it easy to change your Fate Shard
 balance in Dawncaster without manually editing game files.**
 
+![Dawncaster Fate Shard Editor](screenshots/DawncasterFateShardEditor.png)
+
 [Download the latest
 version](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest)
 \| [Direct download: v1.0.1
@@ -33,18 +35,18 @@ No manual JSON editing is required.
 
 ## Features
 
--   Automatically looks for the standard Windows Dawncaster
-    configuration file
--   Displays your current Fate Shard balance
--   Lets you enter a new Fate Shard amount
--   Validates the configuration file before changing it
--   Changes only the `m_CurrentFateShards` value
--   Creates a timestamped backup before saving
--   Provides clear error messages if the file cannot be found, read, or
-    saved
--   Responsive Windows interface with DPI scaling
--   Self-contained Windows executable with no separate .NET installation
-    required
+- Automatically looks for the standard Windows Dawncaster
+  configuration file
+- Displays your current Fate Shard balance
+- Lets you enter a new Fate Shard amount
+- Validates the configuration file before changing it
+- Changes only the `m_CurrentFateShards` value
+- Creates a timestamped backup before saving
+- Provides clear error messages if the file cannot be found, read, or
+  saved
+- Responsive Windows interface with DPI scaling
+- Self-contained Windows executable with no separate .NET installation
+  required
 
 ## Download
 
@@ -171,11 +173,11 @@ utility does not expect.
 
 Before editing, it is recommended that you:
 
--   Close Dawncaster completely.
--   Keep the automatically generated backup files.
--   Avoid manually deleting backups until you are confident the game is
-    working normally.
--   Restore a backup if Dawncaster behaves unexpectedly after a change.
+- Close Dawncaster completely.
+- Keep the automatically generated backup files.
+- Avoid manually deleting backups until you are confident the game is
+  working normally.
+- Restore a backup if Dawncaster behaves unexpectedly after a change.
 
 The author is not responsible for lost progress, corrupted configuration
 files, or other problems resulting from use of this utility.
@@ -195,13 +197,13 @@ The project is a C# WinForms application targeting .NET 8.
 
 To run it from source:
 
-``` powershell
+```powershell
 dotnet run
 ```
 
 To publish a self-contained Windows x64 executable:
 
-``` powershell
+```powershell
 dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
 ```
 
