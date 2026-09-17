@@ -6,13 +6,7 @@ balance in Dawncaster without manually editing game files.**
 ![Dawncaster Fate Shard
 Editor](screenshots/DawncasterFateShardEditor.png)
 
-[Download the latest
-version](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest)
-\| [Direct download: v1.0.1
-EXE](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/download/v1.0.1/DawncasterFateShardEditor.exe)
-\| [View all
-releases](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases)
-\| [Support on Ko-fi](https://ko-fi.com/toddhd)
+[Download the latest version](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest) | [Direct download: v1.0.2 EXE](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/download/v1.0.2/DawncasterFateShardEditor.exe) | [View all releases](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases) | [Support on Ko-fi](https://ko-fi.com/toddhd)
 
 ## What is this?
 
@@ -37,36 +31,36 @@ No manual JSON editing is required.
 
 ## Features
 
--   Automatically looks for the standard Windows Dawncaster
-    configuration file
--   Displays your current Fate Shard balance
--   Lets you enter a new Fate Shard amount
--   Validates the configuration file before changing it
--   Changes only the `m_CurrentFateShards` value
--   Creates a timestamped backup before saving
--   Provides clear error messages if the file cannot be found, read, or
-    saved
--   Responsive Windows interface with DPI scaling
--   Self-contained Windows executable with no separate .NET installation
-    required
+- Automatically looks for the standard Windows Dawncaster
+  configuration file
+- Displays your current Fate Shard balance
+- Lets you enter a new Fate Shard amount
+- Validates the configuration file before changing it
+- Changes only the `m_CurrentFateShards` value
+- Creates a timestamped backup before saving
+- Provides clear error messages if the file cannot be found, read, or
+  saved
+- Responsive Windows interface with DPI scaling
+- Self-contained Windows executable with no separate .NET installation
+  required
 
 ## Download
 
-### Latest release
+### Latest release: v1.0.2
 
-**[Download the latest
-release](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest)**
+**[Download Dawncaster Fate Shard Editor v1.0.2](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/download/v1.0.2/DawncasterFateShardEditor.exe)**
 
-### Current version: v1.0.1
+Or [view the latest release and release notes](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/latest).
 
-**[Download DawncasterFateShardEditor.exe
-directly](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases/download/v1.0.1/DawncasterFateShardEditor.exe)**
+### Installation
 
-You can also [view all releases and release
-notes](https://github.com/toddhd/Dawncaster-Fate-Shard-Editor/releases).
+1. Download `DawncasterFateShardEditor.exe`.
+2. Save it anywhere on your Windows computer.
+3. Double-click the executable to launch it.
 
-The prebuilt release is intended for Windows 10 or Windows 11 and is
-self-contained. You do not need to install the .NET runtime separately.
+No installation is required. The application is distributed as a self-contained executable with its dependencies bundled, so a separate .NET installation is not needed.
+
+**Important:** Versions prior to v1.0.2 may fail to launch when moved outside the original build folder because the application expected an external icon file. Version 1.0.2 corrects this issue.
 
 ## How to use it
 
@@ -197,11 +191,11 @@ utility does not expect.
 
 Before editing, it is recommended that you:
 
--   Close Dawncaster completely.
--   Keep the automatically generated backup files.
--   Avoid manually deleting backups until you are confident the game is
-    working normally.
--   Restore a backup if Dawncaster behaves unexpectedly after a change.
+- Close Dawncaster completely.
+- Keep the automatically generated backup files.
+- Avoid manually deleting backups until you are confident the game is
+  working normally.
+- Restore a backup if Dawncaster behaves unexpectedly after a change.
 
 The author is not responsible for lost progress, corrupted configuration
 files, or other problems resulting from use of this utility.
@@ -233,19 +227,21 @@ The project is a C# WinForms application targeting .NET 8.
 
 To run it from source:
 
-``` powershell
+```powershell
 dotnet run
 ```
 
 To publish a self-contained Windows x64 executable:
 
-``` powershell
-dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
+```powershell
+dotnet publish -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -o ./publish
 ```
 
-The published executable will be created under:
+The published executable will be located at:
 
-`bin\Release\net8.0-windows\win-x64\publish\DawncasterFateShardEditor.exe`
+`publish/DawncasterFateShardEditor.exe`
+
+This is the executable intended for distribution. Do not distribute the EXE from the regular `bin/Release` build directory by itself.
 
 ## Disclaimer
 
